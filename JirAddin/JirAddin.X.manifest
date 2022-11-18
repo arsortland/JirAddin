@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+  <assemblyIdentity name="JirAddin" version="1.0.0.0"></assemblyIdentity>
+
+  <clrClass clsid="{7fc160c6-87b9-43a9-9a21-fafaa5fc5fe5}" progid="JirAddin.StandardAddInServer" threadingModel="Both" name="JirAddin.StandardAddInServer" runtimeVersion=""></clrClass>
+
+  <file name="JirAddin.dll" hashalg="SHA1"></file>
+
+</assembly>
