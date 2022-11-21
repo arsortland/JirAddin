@@ -60,60 +60,6 @@ namespace JirAddin
                 //RunAll runAll = new RunAll();
                 //await runAll.NewMain();
 
-
-
-
-
-
-                public static string RigEDMJson()
-                {
-                    string jsonstring = "{" +
-                        "\"serviceDeskId\": \"4822\"," +
-                        "\"requestTypeId\": \"14610\"," +
-                        "\"requestFieldValues\": {" +
-                        "\"summary\": \"1232432432\"," +
-                        "\"customfield_16671\": {\"value\": \"No Business Disruption - Workaround Available\"}," +
-                        "\"customfield_16665\": {\"value\": \"Impacts Me or a Single Person\"}," +
-                        "\"customfield_10040\": {\"value\": \"Norway\"}," +
-                        "\"customfield_13564\": [{\"value\": \"Other\"}]," +
-                        "\"customfield_12699\": {\"value\": \"Rig Systems\"}," +
-                        "\"customfield_14114\": {\"value\": \"Norway\"}," +
-                        "\"customfield_15509\": {\"value\": \"No, update does not need Global ID\"}," +
-                        "\"customfield_14471\": {\"value\": \"Purchased\"}," +
-                        "\"description\": \"This is a General description sent through JIRA API, Please Ignore this ticket.\"," +
-                        "\"customfield_14361\": {\"value\": \"No, Do Not Enable\"}," +
-                        "\"customfield_13664\": 1" +
-                        "}" +
-                        //"" +
-                        //"" +
-                        //"" +
-                        //"" +
-                        //"" +
-                        //"" +
-                        //"" +
-                        //"" +
-                        //"" +
-                        //"" +
-                        //"" +
-                        //"" +
-                        //"" +
-                        //"" +
-                        //"" +
-                        //"" +
-                        "}";
-                    //Console.WriteLine(jsonstring);
-                    return jsonstring;
-                }
-
-                public static string GCSJson()
-                {
-                    string json = "{ \"serviceDeskId\": \"11\",\"requestTypeId\": \"1112\", \"requestFieldValues\": { \"customfield_11869\": {\"value\": \"Other\"}, \"description\": \"Greetings from CADJIRA API TEST\"  } }";
-                    return json;
-                }
-
-
-
-
             }
             catch (Exception e)
             {
