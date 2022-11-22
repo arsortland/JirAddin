@@ -1,20 +1,10 @@
 ﻿using Inventor;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Linq;
-using System.Text;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
-using System.ComponentModel;
 using CadJiraForAll;
-using System.Runtime.InteropServices;
-using System.Collections;
-using Newtonsoft.Json;
-using RestSharp;
-using RestSharp.Authenticators;
+using System.Threading.Tasks;
+using System.Net.Http;
 
 namespace JirAddin
 {
@@ -50,15 +40,17 @@ namespace JirAddin
                 string propstring = prop.Value.ToString(); // = Partnummer
                 string proptwostring = proptwo.Value.ToString(); // = Vendor/MFG
 
-                //SENDE ATTRIBUTTER FRA CAD/INVENTOR TIL FELLESKODE:
+                ////SENDE ATTRIBUTTER FRA CAD/INVENTOR TIL FELLESKODE:
                 CadJira felleskode = new CadJira();
                 felleskode.DeliverAttributes(propstring, "Inventor");
 
                 //FELLESKODEKJØRING:
                 //felleskode.Formchoice();
                 //await CadJira.API_Request(CadJira.redm_or_gcs);
-                //RunAll runAll = new RunAll();
-                //await runAll.NewMain();
+
+                RunAll runAll = new RunAll();
+                await runAll.NewMain();
+
 
             }
             catch (Exception e)
@@ -68,3 +60,6 @@ namespace JirAddin
         }
     }
 }
+
+
+//henter ikke oppdatert informasjon fra .dll???? Fikset etter å fjernet og lagt til alle referansene på nytt?
