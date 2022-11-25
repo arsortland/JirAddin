@@ -37,14 +37,16 @@ namespace JirAddin
                 Property prop = oPropSet.ItemByPropId[(int)PropertiesForDesignTrackingPropertiesEnum.kPartNumberDesignTrackingProperties];
                 Property proptwo = oPropSet.ItemByPropId[(int)PropertiesForDesignTrackingPropertiesEnum.kVendorDesignTrackingProperties];
                 Property propthree = oPropSet.ItemByPropId[(int)PropertiesForDesignTrackingPropertiesEnum.kMassDesignTrackingProperties];
+                Property propfour = oPropSet.ItemByPropId[(int)PropertiesForDesignTrackingPropertiesEnum.kMaterialDesignTrackingProperties];
 
                 string propstring = prop.Value.ToString(); // = Partnummer
                 string proptwostring = proptwo.Value.ToString(); // = Vendor/MFG
                 string propthreestring = propthree.Value.ToString(); //Vekt/Mass i gram
+                string propfourstring = propfour.Value.ToString(); //Materiale
 
                 ////SENDE ATTRIBUTTER FRA CAD/INVENTOR TIL FELLESKODE:
                 CadJira felleskode = new CadJira();
-                felleskode.DeliverAttributes(propstring, "Inventor", propthreestring);
+                felleskode.DeliverAttributes(propstring, "Inventor", propthreestring, propfourstring);
 
                 //FELLESKODEKJØRING:
                 //felleskode.Formchoice();
@@ -62,6 +64,3 @@ namespace JirAddin
         }
     }
 }
-
-
-//henter ikke oppdatert informasjon fra .dll???? Fikset etter å fjernet og lagt til alle referansene på nytt?
