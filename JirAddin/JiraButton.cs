@@ -3,8 +3,6 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using CadJiraForAll;
-using System.Threading.Tasks;
-using System.Net.Http;
 
 namespace JirAddin
 {
@@ -49,9 +47,6 @@ namespace JirAddin
                 felleskode.DeliverAttributes(propstring, "Inventor", propthreestring, propfourstring);
 
                 //FELLESKODEKJØRING:
-                //felleskode.Formchoice();
-                //await CadJira.API_Request(CadJira.redm_or_gcs);
-
                 RunAll runAll = new RunAll();
                 await runAll.NewMain();
 
