@@ -48,7 +48,7 @@ namespace JirAddin
 
                 //FELLESKODEKJØRING:
                 RunAll runAll = new RunAll();
-                await runAll.NewMain();
+                runAll.NewMain();
 
 
             }
