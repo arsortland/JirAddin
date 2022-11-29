@@ -1,8 +1,8 @@
-﻿using Inventor;
+﻿using CadJiraForAll;
+using Inventor;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using CadJiraForAll;
 
 namespace JirAddin
 {
@@ -13,6 +13,7 @@ namespace JirAddin
         //const string ContentCenterGuid = "{B9600981-DEE8-4547-8D7C-E525B3A1727A}";
         //const string DocumentSummaryGuid = "{D5CDD502-2E9C-101B-9397-08002B2CF9AE}";
         const string SummaryGuid = "{F29F85E0-4FF9-1068-AB91-08002B27B3D9}";
+
         public JiraButton(string displayName, string internalName, CommandTypesEnum commandType, string clientId, string description, string tooltip, Icon standardIcon, Icon largeIcon, ButtonDisplayEnum buttonDisplayType)
     : base(displayName, internalName, commandType, clientId, description, tooltip, standardIcon, largeIcon, buttonDisplayType)
         {
@@ -24,7 +25,7 @@ namespace JirAddin
         {
 
         }
-        override protected async void ButtonDefinition_OnExecute(NameValueMap context)
+        override protected void ButtonDefinition_OnExecute(NameValueMap context)
         {
             try
             {
