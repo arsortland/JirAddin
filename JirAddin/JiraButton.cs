@@ -38,14 +38,14 @@ namespace JirAddin
                 Property propthree = oPropSet.ItemByPropId[(int)PropertiesForDesignTrackingPropertiesEnum.kMassDesignTrackingProperties];
                 Property propfour = oPropSet.ItemByPropId[(int)PropertiesForDesignTrackingPropertiesEnum.kMaterialDesignTrackingProperties];
 
-                string propstring = prop.Value.ToString(); // = Partnummer
-                string proptwostring = proptwo.Value.ToString(); // = Vendor/MFG
-                string propthreestring = propthree.Value.ToString(); //Vekt/Mass i gram
-                string propfourstring = propfour.Value.ToString(); //Materiale
+                string partNumberAsString = prop.Value.ToString(); // = Partnummer
+                string supplierAsString = proptwo.Value.ToString(); // = Vendor/MFG
+                string massAsString = propthree.Value.ToString(); //Vekt/Mass i gram
+                string materialAsString = propfour.Value.ToString(); //Materiale
 
                 ////SENDE ATTRIBUTTER FRA CAD/INVENTOR TIL FELLESKODE:
                 CadJira felleskode = new CadJira();
-                felleskode.DeliverAttributes(propstring, "Inventor", propthreestring, propfourstring);
+                felleskode.DeliverAttributes(partNumberAsString, "Inventor", massAsString, materialAsString);
 
                 //FELLESKODEKJØRING:
                 RunAll runAll = new RunAll();
